@@ -10,9 +10,9 @@ html {
 }
 
 body {
-  background: url('../../images/gallery/service-img16.jpg') no-repeat center
+  /* background: url('../../images/gallery/service-img16.jpg') no-repeat center
     center fixed;
-  background-size: cover;
+  background-size: cover; */
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
@@ -35,7 +35,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
 }
 
@@ -208,7 +208,8 @@ body {
 .hero .hero-title {
   font-family: 'Oswald', sans-serif;
   font-size: 7rem;
-  font-weight: 600;
+  font-weight: 900;
+  color: #ffffff;
 }
 
 .hero-container .hero-paragraph {
@@ -223,6 +224,7 @@ body {
   font-size: 1rem;
   margin-top: 1rem;
   font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
 }
 /* Reserve space so CHURCH ON A doesn’t shake */
 .typewriter-container {
@@ -242,6 +244,7 @@ body {
   border-right: 3px solid #fff;
   animation: blinkCursor 0.8s steps(2) infinite;
   font-size: 7rem;
+  font-weight: 900;
 }
 
 /* Blinking cursor effect */
@@ -266,7 +269,7 @@ body {
 /* Hero Buttons Container */
 .hero-buttons {
   display: flex;
-  gap: 10rem;
+  gap: 20rem;
   justify-content: center;
   margin-top: 1.5rem;
 }
@@ -309,6 +312,13 @@ body {
   transition: transform 0.2s ease;
 }
 
+.our-service {
+  margin-top: 0px;
+  background-color: rgb(255, 255, 255);
+  margin-bottom: 0;
+  padding-top: 50px;
+}
+
 .our-service h2,
 .our-service p {
   text-align: center;
@@ -316,15 +326,12 @@ body {
 }
 
 .our-service h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
 }
 
-.our-service {
-  margin-top: 0px;
-  background-color: rgb(255, 255, 255);
-  margin-bottom: 0;
-  padding: 100px 0;
+.our-service .our-service-join {
+  padding: 0 400px;
 }
 
 .see-all-service-container {
@@ -378,6 +385,10 @@ body {
   position: relative;
   z-index: 2;
   color: white;
+  background: url('../../images/gallery/service-img16.jpg') no-repeat center
+    center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .prayer-container {
@@ -409,7 +420,7 @@ body {
 }
 
 .btn:hover {
-  background-color: rgb(255, 193, 8);
+  background-color: #f8f3f3;
   color: black;
   transform: translateY(-3px);
 }
@@ -450,23 +461,6 @@ body {
   transform: translateY(-3px);
 }
 
-/* .prayer-container button {
-  background-color: rgb(169, 47, 41);
-  color: #fff;
-  border: none;
-  padding: 12px 35px;
-  font-size: 1rem;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.prayer-container button:hover {
-  background-color: rgb(255, 193, 8);
-  color: black;
-  transform: translateY(-3px);
-} */
-
 .prayer-container {
   opacity: 0;
   transform: translateY(30px);
@@ -493,7 +487,7 @@ body {
 }
 
 .upcoming-events h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 2rem;
 }
@@ -638,6 +632,7 @@ body {
 .gallery-section h2 {
   color: rgb(51, 42, 85);
   font-size: 2.5rem;
+  font-weight: 800;
 }
 
 .gallery-intro {
@@ -772,7 +767,7 @@ body {
 }
 
 .location-btn:hover {
-  background-color: rgb(14, 110, 253);
+  background-color: rgb(169, 47, 41);
   color: #fff;
   border: none;
 }
@@ -791,7 +786,9 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-position: top center; /* adjust the focus point for small screens */
+    background-attachment: scroll !important;
+    background-position: center top !important;
+    background-size: cover !important;
   }
   /* ------------------------------
      HERO SECTION
@@ -924,6 +921,15 @@ body {
     font-size: 1.1rem;
   }
 
+  .prayer-section {
+    padding: 60px 20px;
+  }
+
+  .prayer-container {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
   /* ------------------------------
      LOCATION SECTION
   ------------------------------ */
@@ -935,6 +941,10 @@ body {
     margin: 0 auto;
     padding: 0 1rem;
   }
+  /* .location-container {
+    text-align: left;
+    color: red;
+  } */
 
   .location-info,
   .location-map {
@@ -943,22 +953,27 @@ body {
   }
 
   .location-info h2 {
-    text-align: center;
     font-size: 2rem;
   }
 
   .location-description,
   .location-details {
-    text-align: center;
+    text-align: left;
     font-size: 0.95rem;
+    width: 90%;
   }
 
   .location-btn {
     display: block;
-    margin: 1rem auto 0 auto;
+    margin: 2rem auto 0 auto;
+    padding: 12px 0px;
+    border-radius: 40px;
+    text-align: center;
+    width: 70%;
   }
 
   .location-map {
-    height: 250px;
+    height: 260px;
+    width: 100%;
   }
 }
