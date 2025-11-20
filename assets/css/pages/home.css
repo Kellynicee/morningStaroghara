@@ -376,7 +376,7 @@ body {
   text-align: left;
 }
 
-.prayer-section {
+/* .prayer-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -389,6 +389,29 @@ body {
     center;
   background-size: cover;
   background-attachment: fixed;
+} */
+
+/* Replace your existing .prayer-section declaration with this */
+.prayer-section {
+  position: relative; /* needed for absolute bg in option B; safe here */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 100px 20px;
+  z-index: 2;
+  color: white;
+
+  /* background image */
+  background-image: url('../../images/gallery/service-img16.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; /* change to top/center if you want top focus */
+  /* DO NOT use fixed on mobile/ios */
+  background-attachment: scroll;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  transform: translateZ(0); /* sometimes forces proper painting on mobile */
 }
 
 .prayer-container {
@@ -975,5 +998,14 @@ body {
   .location-map {
     height: 260px;
     width: 100%;
+  }
+}
+
+/* iOS Safari specific: ensure scroll attachment and force position */
+@supports (-webkit-touch-callout: none) {
+  .prayer-section {
+    background-attachment: scroll !important;
+    background-position: center top !important; /* or center center */
+    background-size: cover !important;
   }
 }
