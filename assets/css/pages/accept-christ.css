@@ -1,0 +1,95 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fdfdfd;
+  color: #333;
+}
+
+.journey-section {
+  background: linear-gradient(135deg, #f8f9fa, #fff);
+  text-align: center;
+  padding: 80px 0;
+}
+
+.journey-point {
+  margin-bottom: 40px;
+  transition: transform 0.4s ease;
+}
+
+.journey-point i {
+  color: #a92f29;
+  margin-bottom: 10px;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.journey-point h5 {
+  font-weight: 600;
+}
+
+.journey-point:hover i {
+  color: #d94a3f;
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* Accept Christ Form */
+.accept-christ-form .card {
+  border-radius: 15px;
+  padding: 40px;
+  background: #fff;
+}
+
+.accept-christ-form h2 {
+  color: #a92f29;
+}
+
+.accept-christ-form .btn-primary {
+  background-color: #a92f29;
+  border-color: #a92f29;
+  transition: 0.3s;
+}
+
+.accept-christ-form .btn-primary:hover {
+  background-color: #d94a3f;
+  border-color: #d94a3f;
+}
+
+.accept-christ-form img {
+  max-height: 350px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.accept-christ-form img.animated-img:hover {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.accept-christ-form .btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.accept-christ-form .btn-success:hover {
+  background-color: #218838;
+  border-color: #218838;
+}
+
+/* Fade-in Animations */
+.fade-in,
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+
+.fade-in-left {
+  transform: translateX(-50px);
+}
+
+.fade-in-right {
+  transform: translateX(50px);
+}
+
+.appear {
+  opacity: 1;
+  transform: translateX(0) translateY(0);
+}

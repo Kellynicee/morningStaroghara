@@ -1,0 +1,36 @@
+.sermon-hero {
+  background: url('assets/images/hero/sermon-hero.jpg') center/cover no-repeat;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.sermon-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.sermon-hero h1 {
+  position: relative;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  z-index: 1;
+}
+
+.sermon-hero p {
+  position: relative;
+  z-index: 1;
+  margin-top: 10px;
+  font-size: 1.2rem;
+}
+
+.card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Listen to Sermons – Morningstar Covenant Int'l Church</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/shared.css" />
+    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <link rel="stylesheet" href="assets/css/pages/sermons.css" />
+
+    <style>
+      .audio-hero {
+        background: url('assets/images/hero/audio-hero.jpg') no-repeat center
+          center;
+        background-size: cover;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        position: relative;
+      }
+      .audio-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .audio-hero h1 {
+        position: relative;
+        font-size: 2.5rem;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 700;
+        z-index: 1;
+      }
+      .audio-hero p {
+        position: relative;
+        z-index: 1;
+        font-size: 1.2rem;
+        margin-top: 10px;
+      }
+      .audio-list {
+        max-width: 900px;
+        margin: 2rem auto;
+      }
+      .audio-card {
+        background: #fff;
+        padding: 15px;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .audio-card h3 {
+        font-size: 1.2rem;
+        color: rgb(51, 42, 85);
+        font-weight: 700;
+      }
+      .audio-meta {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 0.5rem;
+      }
+      .audio-card audio {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+      .download-btn {
+        background-color: rgb(169, 47, 41);
+        color: #fff;
+        padding: 8px 15px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+      .download-btn:hover {
+        background-color: #fff;
+        color: rgb(169, 47, 41);
+        border: 1px solid rgb(169, 47, 41);
+      }
+      .more-messages {
+        text-align: center;
+        margin: 3rem 0;
+      }
+      .more-messages a {
+        background-color: rgb(169, 47, 41);
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+      .more-messages a:hover {
+        background-color: #fff;
+        color: rgb(169, 47, 41);
+        border: 1px solid rgb(169, 47, 41);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+          <img
+            src="assets/images/logo/church-logo.avif"
+            width="200"
+            class="me-2 logo"
+            alt="Church Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="sermons.html">Sermons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="give.html">Give</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="audio-hero">
+      <div>
+        <h1>Listen to Sermons</h1>
+        <p>Hear God’s Word Anytime, Anywhere</p>
+      </div>
+    </section>
+
+    <!-- Audio List -->
+    <div class="audio-list" id="audio-list">
+      <!-- Audio cards dynamically generated here -->
+    </div>
+
+    <!-- Access More Messages -->
+    <div class="more-messages">
+      <a href="https://t.me/yourchurchchannel" target="_blank">
+        Access More Messages
+      </a>
+    </div>
+
+    <!-- Footer (reuse your existing footer) -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/logo/church-logo.avif"
+            alt="Morningstar Church Logo"
+            class="footer-logo"
+          />
+          <p>
+            Morningstar Covenant Int’l Church – Oghara
+            <br />
+            “Raising people of purpose, power, and praise.”
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Phone:</strong>
+            +234 813 456 7890
+          </p>
+          <p>
+            <strong>Email:</strong>
+            morningstaroghara@gmail.com
+          </p>
+          <p>
+            <strong>Address:</strong>
+            Legit Junction, Otefe-Oghara, Delta State
+          </p>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-link">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Morningstar Covenant Int’l Church – Oghara. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const audioList = document.getElementById('audio-list');
+
+      // Get sermon ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const sermonId = parseInt(urlParams.get('sermon')) || null;
+
+      // Fetch sermons
+      fetch('assets/js/sermons.json')
+        .then((res) => res.json())
+        .then((data) => {
+          let selectedSermons = data;
+
+          if (sermonId) {
+            // Show selected sermon + 9 more audios (latest)
+            const sermon = data.find((s) => s.id === sermonId);
+            const otherAudios = data
+              .filter((s) => s.id !== sermonId)
+              .slice(0, 9);
+            selectedSermons = [sermon, ...otherAudios];
+          } else {
+            selectedSermons = data.slice(0, 10);
+          }
+
+          selectedSermons.forEach((s) => {
+            const card = document.createElement('div');
+            card.className = 'audio-card';
+            card.innerHTML = `
+            <h3>${s.title}</h3>
+            <p class="audio-meta">Speaker: ${s.speaker} | Date: ${s.date} | Series: ${s.series}</p>
+            <audio controls>
+              <source src="${s.audio}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <a href="${s.audio}" download class="download-btn">Download Audio</a>
+          `;
+            audioList.appendChild(card);
+          });
+        })
+        .catch((err) => console.error(err));
+    </script>
+  </body>
+</html>

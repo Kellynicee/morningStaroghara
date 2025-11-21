@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Worship Service",
+    "speaker": "Pastor John",
+    "date": "Nov 15, 2025",
+    "image": "assets/images/gallery/service-img1.jpg",
+    "video": "videos/worship-service.mp4",
+    "audio": "audios/worship-service.mp3",
+    "series": "General"
+  },
+  {
+    "id": 2,
+    "title": "Marriage & Relationship Masterclass",
+    "speaker": "Pastor Jane",
+    "date": "Nov 12, 2025",
+    "image": "assets/images/gallery/service-img8.jpg",
+    "video": "videos/marriage-masterclass.mp4",
+    "audio": "audios/marriage-masterclass.mp3",
+    "series": "Marriage Series"
+  },
+  {
+    "id": 3,
+    "title": "Spirit & Word Encounter",
+    "speaker": "Pastor John",
+    "date": "Nov 10, 2025",
+    "image": "assets/images/gallery/service-img3.jpg",
+    "video": "videos/spirit-word-encounter.mp4",
+    "audio": "audios/spirit-word-encounter.mp3",
+    "series": "Bible Study"
+  }
+]

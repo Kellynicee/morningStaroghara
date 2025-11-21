@@ -1,0 +1,242 @@
+/* ===============================
+  Visit Page CSS
+=============================== */
+
+/* Body & General */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+h2.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #a92f29;
+}
+
+/* ===============================
+  Our Services Section
+=============================== */
+.services-section {
+  background-color: #fdf7f5;
+  padding: 60px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 15px 0 10px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  padding: 0 10px;
+  color: #555;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+  Contact / Need to Reach Us
+=============================== */
+.contact-section {
+  padding: 60px 20px;
+}
+
+.contact-section h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #a92f29;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+  Join Us Online Section
+=============================== */
+.join-online {
+  padding: 60px 20px;
+}
+
+.join-online h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #a92f29;
+  margin-bottom: 30px;
+}
+
+.join-online-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.join-online .social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.join-online .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  background: #a92f29;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.join-online .social-icons a:hover {
+  transform: scale(1.2) rotate(10deg);
+  background: #7a1d1b;
+}
+
+.join-online .online-image img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* ===============================
+  Branch Church Section
+=============================== */
+.branches-section {
+  padding: 60px 20px;
+  background-color: #fdf7f5;
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.branch-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.branch-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.branch-card h3 {
+  margin: 15px 0 10px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  color: #a92f29;
+}
+
+.branch-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.branch-card .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.branch-card .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  color: #fff;
+  background: #a92f29;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.branch-card .social-icons a:hover {
+  transform: scale(1.2);
+  background: #7a1d1b;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ===============================
+  Footer Overrides
+=============================== */
+.footer {
+  background: #222;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #a92f29;
+}
+
+.footer .social-icons a {
+  width: 35px;
+  height: 35px;
+  font-size: 0.9rem;
+  margin-right: 10px;
+  background: #a92f29;
+}
+
+.footer .social-icons a:hover {
+  background: #7a1d1b;
+  transform: scale(1.2);
+}
+
+/* ===============================
+  Responsive
+=============================== */
+@media (max-width: 768px) {
+  .join-online-flex {
+    flex-direction: column;
+  }
+}

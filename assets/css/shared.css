@@ -1,25 +1,18 @@
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: #1f2937;
-  padding-top: 80px;
-}
-
-a {
-  font-family: 'Montserrat', sans-serif;
-}
-
+/* ===============================
+   NAVBAR
+================================= */
 nav.navbar {
-  position: sticky; /* makes navbar stick */
-  top: 0; /* stick to the top */
-  z-index: 1030; /* ensures it stays above other content */
-  background-color: #fff; /* fallback background */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-/* Optional: smooth transition when scrolling */
 nav.navbar.scrolled {
-  background-color: #fff; /* solid background after scroll */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* ===============================

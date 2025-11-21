@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Watch Sermon – Morningstar Covenant Int'l Church</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/shared.css" />
+    <link rel="stylesheet" href="assets/css/pages/sermons.css" />
+
+    <style>
+      .video-hero {
+        background: #f8f9fa;
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .video-hero h1 {
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.5rem;
+        color: rgb(169, 47, 41);
+      }
+      .video-container {
+        width: 90%;
+        max-width: 900px;
+        margin: 2rem auto;
+        text-align: center;
+      }
+      video {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+      .sermon-meta {
+        margin: 1rem 0 2rem 0;
+        text-align: left;
+        width: 90%;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .sermon-meta p {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+      }
+      .download-btn {
+        display: inline-block;
+        background-color: rgb(169, 47, 41);
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+      }
+      .download-btn:hover {
+        background-color: #fff;
+        color: rgb(169, 47, 41);
+        border: 1px solid rgb(169, 47, 41);
+      }
+      .latest-videos {
+        width: 90%;
+        max-width: 1000px;
+        margin: 3rem auto;
+      }
+      .latest-videos h3 {
+        color: rgb(169, 47, 41);
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 1.5rem;
+      }
+      .video-card {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        align-items: center;
+      }
+      .video-card img {
+        width: 120px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+      .video-card div {
+        flex: 1;
+      }
+      .video-card a {
+        color: rgb(169, 47, 41);
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .video-card a:hover {
+        text-decoration: underline;
+      }
+      .watch-more-btn {
+        display: inline-block;
+        margin-top: 2rem;
+        background-color: rgb(169, 47, 41);
+        color: #fff;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      .watch-more-btn:hover {
+        background-color: #fff;
+        color: rgb(169, 47, 41);
+        border: 1px solid rgb(169, 47, 41);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+          <img
+            src="assets/images/logo/church-logo.avif"
+            width="200"
+            class="me-2 logo"
+            alt="Church Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="sermons.html">Sermons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="give.html">Give</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="video-hero">
+      <h1>Watch Sermon</h1>
+      <p>Engage with God’s Word Anytime, Anywhere</p>
+    </section>
+
+    <!-- Video Player -->
+    <div class="video-container">
+      <video id="sermon-video" controls>
+        <source src="" type="video/mp4" />
+        Your browser does not support HTML5 video.
+      </video>
+    </div>
+
+    <!-- Metadata & Download -->
+    <div class="sermon-meta" id="sermon-meta">
+      <p>
+        <strong>Title:</strong>
+        <span id="meta-title"></span>
+      </p>
+      <p>
+        <strong>Speaker:</strong>
+        <span id="meta-speaker"></span>
+      </p>
+      <p>
+        <strong>Date:</strong>
+        <span id="meta-date"></span>
+      </p>
+      <p>
+        <strong>Series:</strong>
+        <span id="meta-series"></span>
+      </p>
+      <a id="download-btn" href="" download class="download-btn">
+        Download Video
+      </a>
+    </div>
+
+    <!-- Latest 5 Videos -->
+    <section class="latest-videos" id="latest-videos">
+      <h3>Latest Videos</h3>
+      <!-- JS will insert 5 latest video cards here -->
+    </section>
+
+    <!-- Watch More Videos -->
+    <div style="text-align: center">
+      <a
+        href="https://youtube.com/@YourChurchChannel"
+        target="_blank"
+        class="watch-more-btn"
+      >
+        Watch More Videos
+      </a>
+    </div>
+
+    <!-- Footer (reuse existing) -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/logo/church-logo.avif"
+            alt="Morningstar Church Logo"
+            class="footer-logo"
+          />
+          <p>
+            Morningstar Covenant Int’l Church – Oghara
+            <br />
+            “Raising people of purpose, power, and praise.”
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Phone:</strong>
+            +234 813 456 7890
+          </p>
+          <p>
+            <strong>Email:</strong>
+            morningstaroghara@gmail.com
+          </p>
+          <p>
+            <strong>Address:</strong>
+            Legit Junction, Otefe-Oghara, Delta State
+          </p>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-link">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Morningstar Covenant Int’l Church – Oghara. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Get sermon ID from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const sermonId = urlParams.get('id');
+
+      fetch('assets/js/sermons.json')
+        .then((res) => res.json())
+        .then((data) => {
+          // Find selected sermon
+          const sermon = data.find((v) => v.id == sermonId) || data[0];
+
+          // Populate video
+          const video = document.getElementById('sermon-video');
+          video.src = sermon.video;
+
+          // Populate metadata
+          document.getElementById('meta-title').textContent = sermon.title;
+          document.getElementById('meta-speaker').textContent = sermon.speaker;
+          document.getElementById('meta-date').textContent = sermon.date;
+          document.getElementById('meta-series').textContent = sermon.series;
+
+          // Download button
+          document.getElementById('download-btn').href = sermon.video;
+
+          // Latest 5 videos (exclude current)
+          const latest = data
+            .filter((v) => v.id != sermon.id)
+            .slice(-5)
+            .reverse();
+          const latestContainer = document.getElementById('latest-videos');
+
+          latest.forEach((v) => {
+            const card = document.createElement('div');
+            card.classList.add('video-card');
+            card.innerHTML = `
+              <img src="${v.image}" alt="${v.title}" />
+              <div>
+                <a href="watch-video.html?id=${v.id}">${v.title}</a>
+                <p>${v.speaker} | ${v.date}</p>
+              </div>
+            `;
+            latestContainer.appendChild(card);
+          });
+        })
+        .catch((err) => console.error('Error loading sermons:', err));
+    </script>
+  </body>
+</html>

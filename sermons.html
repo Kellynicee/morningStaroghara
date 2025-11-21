@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sermons – Morningstar Covenant Int'l Church</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Oswald:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/shared.css" />
+    <link rel="stylesheet" href="assets/css/pages/home.css" />
+    <link rel="stylesheet" href="assets/css/pages/sermons.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-primary" href="index.html">
+          <img
+            src="assets/images/logo/church-logo.avif"
+            width="200"
+            class="me-2 logo"
+            alt="Church Logo"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Sermons</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="give.html">Give</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="sermon-hero">
+      <div>
+        <h1>Our Sermons</h1>
+        <p>Engage with God’s Word Anytime, Anywhere</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <div class="sermon-filters">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="2025">2025</button>
+      <button data-filter="2024">2024</button>
+      <button data-filter="Pastor John">Pastor John</button>
+      <button data-filter="Pastor Jane">Pastor Jane</button>
+      <button data-filter="Marriage Series">Marriage Series</button>
+    </div>
+
+    <!-- Sermon Grid -->
+    <section class="sermon-grid" id="sermon-grid">
+      <!-- Sermon cards will load dynamically via JS -->
+    </section>
+
+    <!-- Pagination -->
+    <div class="sermon-pagination" id="sermon-pagination">
+      <!-- Dynamic pagination buttons -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <img
+            src="assets/images/logo/church-logo.avif"
+            alt="Morningstar Church Logo"
+            class="footer-logo"
+          />
+          <p>
+            Morningstar Covenant Int’l Church – Oghara
+            <br />
+            “Raising people of purpose, power, and praise.”
+          </p>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Phone:</strong>
+            +234 813 456 7890
+          </p>
+          <p>
+            <strong>Email:</strong>
+            morningstaroghara@gmail.com
+          </p>
+          <p>
+            <strong>Address:</strong>
+            Legit Junction, Otefe-Oghara, Delta State
+          </p>
+        </div>
+        <div class="footer-social">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#" class="social-link">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-link">
+              <i class="fab fa-telegram-plane"></i>
+            </a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 Morningstar Covenant Int’l Church – Oghara. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/sermons.js"></script>
+  </body>
+</html>

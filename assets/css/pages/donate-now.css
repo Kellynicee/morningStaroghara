@@ -1,0 +1,81 @@
+/* General Page Styling */
+.donate-page {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.donate-page h1 {
+  font-family: 'Oswald', sans-serif;
+  color: rgb(169, 47, 41);
+  font-size: 2.5rem;
+}
+
+.donate-page h5 {
+  font-weight: 600;
+}
+
+.donate-page p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Cards */
+.donate-page .card {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.donate-page .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.donate-page .copy-btn {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+}
+
+.donate-page .copy-btn:hover {
+  background-color: rgb(169, 47, 41);
+  color: #fff;
+  border-color: rgb(169, 47, 41);
+}
+
+/* Give Now Button */
+.donate-page .btn-primary {
+  background-color: rgb(169, 47, 41);
+  border-color: rgb(169, 47, 41);
+  transition: all 0.3s ease;
+}
+
+.donate-page .btn-primary:hover {
+  background-color: #fff;
+  color: rgb(169, 47, 41);
+  border-color: rgb(169, 47, 41);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .donate-page .row {
+    text-align: center;
+  }
+
+  .donate-page .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Footer Adjustments */
+.footer {
+  margin-top: 5rem;
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+
+.footer-bottom {
+  padding-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
