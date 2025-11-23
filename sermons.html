@@ -16,6 +16,12 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/shared.css" />
     <link rel="stylesheet" href="assets/css/pages/home.css" />
@@ -71,25 +77,64 @@
       </div>
     </section>
 
-    <!-- Filters -->
-    <div class="sermon-filters">
-      <button class="active" data-filter="all">All</button>
-      <button data-filter="2025">2025</button>
-      <button data-filter="2024">2024</button>
-      <button data-filter="Pastor John">Pastor John</button>
-      <button data-filter="Pastor Jane">Pastor Jane</button>
-      <button data-filter="Marriage Series">Marriage Series</button>
+    <!-- Optional Dropdown Filter (you can hide if only 3 cards) -->
+    <div class="sermon-filters-dropdown">
+      <select id="sermon-filter">
+        <option value="all">All Sermons</option>
+        <option value="worship">Worship Service</option>
+        <option value="marriage">Marriage & Relationship Masterclass</option>
+        <option value="spirit">Spirit & Word Encounter</option>
+      </select>
     </div>
 
     <!-- Sermon Grid -->
     <section class="sermon-grid" id="sermon-grid">
-      <!-- Sermon cards will load dynamically via JS -->
-    </section>
+      <!-- 3 Main Cards -->
+      <div class="sermon-card" data-category="worship">
+        <img
+          src="assets/images/gallery/service-img1.jpg"
+          alt="Worship Service"
+        />
+        <div class="sermon-content">
+          <h3>Worship Service</h3>
+          <p>Speaker: Pastor Precious Ogie | Date: Nov 10, 2025</p>
+          <div class="sermon-buttons">
+            <a href="watch-video.html?sermon=1">Watch Video</a>
+            <a href="listen-audio.html?sermon=1">Listen Audio</a>
+          </div>
+        </div>
+      </div>
 
-    <!-- Pagination -->
-    <div class="sermon-pagination" id="sermon-pagination">
-      <!-- Dynamic pagination buttons -->
-    </div>
+      <div class="sermon-card" data-category="marriage">
+        <img
+          src="assets/images/gallery/service-img2.jpg"
+          alt="Marriage & Relationship Masterclass"
+        />
+        <div class="sermon-content">
+          <h3>Marriage & Relationship Masterclass</h3>
+          <p>Speaker: Pastor Precious Ogie | Date: Nov 12, 2025</p>
+          <div class="sermon-buttons">
+            <a href="watch-video.html?sermon=2">Watch Video</a>
+            <a href="listen-audio.html?sermon=2">Listen Audio</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sermon-card" data-category="spirit">
+        <img
+          src="assets/images/gallery/service-img3.jpg"
+          alt="Spirit & Word Encounter"
+        />
+        <div class="sermon-content">
+          <h3>Spirit & Word Encounter</h3>
+          <p>Speaker: Pastor Precious Ogie | Date: Nov 14, 2025</p>
+          <div class="sermon-buttons">
+            <a href="watch-video.html?sermon=3">Watch Video</a>
+            <a href="listen-audio.html?sermon=3">Listen Audio</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -110,18 +155,18 @@
           <h4>Contact Us</h4>
           <p>
             <strong>Phone:</strong>
-            +234 813 456 7890
+            +234 803 205 7709
           </p>
           <p>
             <strong>Email:</strong>
-            morningstaroghara@gmail.com
+            morningstarcovenantotefeoghara@gmail.com
           </p>
           <p>
             <strong>Address:</strong>
             Legit Junction, Otefe-Oghara, Delta State
           </p>
         </div>
-        <div class="footer-social">
+        <div class="footer-social footer-contact">
           <h4>Connect With Us</h4>
           <div class="social-icons">
             <a href="#" class="social-link">
@@ -146,6 +191,21 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/sermons.js"></script>
+    <script>
+      // ===== Optional Filter JS for the 3 cards =====
+      const filterSelect = document.getElementById('sermon-filter');
+      const cards = document.querySelectorAll('.sermon-card');
+
+      filterSelect.addEventListener('change', (e) => {
+        const value = e.target.value;
+        cards.forEach((card) => {
+          if (value === 'all' || card.dataset.category === value) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    </script>
   </body>
 </html>

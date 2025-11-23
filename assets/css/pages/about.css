@@ -6,6 +6,11 @@ body {
   padding: 0;
 }
 
+.container {
+  width: 95%;
+  margin: auto;
+}
+
 /* ----------------------------
    ABOUT US SECTION
 -----------------------------*/
@@ -50,7 +55,7 @@ body {
 .expect-card h5 {
   margin-top: 10px;
   font-weight: 300;
-  padding: 20px 0px;
+  padding: 20px 0;
 }
 
 /* ----------------------------
@@ -99,6 +104,9 @@ body {
 /* ----------------------------
    LEADERSHIP & PASTORS
 -----------------------------*/
+.leadership {
+  padding-bottom: 0;
+}
 .leadership h2 {
   color: rgb(49, 29, 107);
   font-size: 2.5rem;
@@ -107,22 +115,23 @@ body {
 .leadership h4 {
   font-size: 0.9rem;
   color: #a92f29;
+  text-align: center;
 }
 .leader-card,
 .pastor-card {
   position: relative;
   overflow: hidden;
-  border-radius: 10px;
-  height: 90%;
-  width: 90%;
+  border-radius: 12px;
   margin: auto;
 }
-.leader-card img,
-.pastor-card img {
+.leader-card img {
+  width: 100%;
   height: 700px;
   object-fit: cover;
+}
+.pastor-card img {
   width: 100%;
-  border-radius: 12px;
+  object-fit: cover;
 }
 .leader-overlay,
 .pastor-overlay {
@@ -135,55 +144,73 @@ body {
   padding: 10px;
   text-align: center;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(100%);
 }
 .leader-card:hover .leader-overlay,
 .pastor-card:hover .pastor-overlay {
   opacity: 1;
+  transform: translateY(0);
+}
+
+/* Social icons inside overlays */
+.leader-overlay .social-icons,
+.pastor-overlay .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
 }
 .leader-overlay .social-icons a,
 .pastor-overlay .social-icons a {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
   color: #fff;
-  margin: 0 5px;
-  transition: transform 0.3s;
   text-decoration: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
 }
 .leader-overlay .social-icons a:hover,
 .pastor-overlay .social-icons a:hover {
   transform: scale(1.2);
+  background: rgba(169, 47, 41, 0.9);
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+/* ----------------------------
+   RESIDENT PASTORS
+-----------------------------*/
 
-.social-icons a {
-  margin: 0 8px;
+.oghara-pastors-section h4 {
+  color: rgb(49, 29, 107);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.oghara-pastors .leader-card img {
+  height: 450px;
 }
 
 /* ----------------------------
    ALL PASTORS GRID
 -----------------------------*/
-
 .all-pastors-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 per row on desktop */
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  justify-items: center; /* center each pastor card */
+  justify-items: center;
 }
-
-/* Ensure pastor images look good */
 .all-pastors-grid .pastor-card img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px;
+  height: 350px;
 }
 .all-pastors h2 {
   color: rgb(49, 29, 107);
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
 }
 
@@ -192,8 +219,12 @@ body {
 -----------------------------*/
 .our-churches h2 {
   color: rgb(49, 29, 107);
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
+}
+
+.our-churches p {
+  font-size: 1rem;
 }
 .church-card {
   position: relative;
@@ -252,112 +283,73 @@ h5 {
 }
 
 /* ==========================================
-   📱 MOBILE & RESPONSIVE MEDIA QUERIES
+   MOBILE & RESPONSIVE MEDIA QUERIES
 ========================================== */
-
-/* ==============================
-   Large Tablets / Desktops (992px - 1200px)
-============================== */
 @media (max-width: 992px) {
-  /* Pastors grid — 2 per row */
   .all-pastors-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .all-pastors-grid .pastor-card img {
-    height: 200px;
+    height: 250px;
   }
-
-  /* Bootstrap columns adjustments */
-  .col-md-3 {
-    width: 50%;
-    flex: 0 0 50%;
-  }
-
   .pastor-card img {
     height: 250px;
   }
 }
 
-/* ==============================
-   Tablets / Small Desktops (768px - 991px)
-============================== */
 @media (max-width: 768px) {
-  /* About Us Section */
   .about-us-section h2 {
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 0 18px;
-  }
-
-  .about-us-section h5 {
     font-size: 1.1rem;
-    margin-top: 30px;
-    padding: 0 18px;
+    text-align: left;
   }
-
+  .about-us-section h5 {
+    font-size: 0.9rem;
+    margin-top: 30px;
+  }
   .about-us-section p {
     font-size: 0.8rem;
-    padding: 0 18px;
+    text-align: justify;
   }
-
   .about-us-img {
     padding: 0 28px;
   }
 
-  /* What to Expect */
-  .what-to-expect {
-    padding: 0 18px;
+  .vision-mission h3 {
+    font-size: 1.5rem;
+  }
+  .vision-mission p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
   }
 
-  /* Vision & Mission */
-  .vision-mission {
-    padding: 0 18px;
-  }
-
-  /* Creed Section */
   .creed-section .row {
     flex-direction: column;
     text-align: left;
   }
-
   .creed-section .col-md-4 {
     order: 2;
     width: 150px;
     margin-left: -200px;
   }
-
   .creed-section .col-md-8 {
     order: 1;
     text-align: justify;
   }
-
   .creed-logo {
     height: 100px;
     margin-left: 0;
   }
-
   .creed-section {
-    padding: 0 18px;
     padding-bottom: 0;
     margin-bottom: 0;
   }
-
   .creed-section h3 {
     text-align: center;
     font-size: 2rem;
   }
-
   .creed-section p {
     font-size: 1rem;
-  }
-
-  /* Leader & Pastor Cards */
-  .leader-card,
-  .pastor-card {
-    height: 90%;
-    width: 90%;
-    margin: auto;
   }
 
   .leader-card img,
@@ -365,71 +357,49 @@ h5 {
     height: 400px;
   }
 
-  /* Our Churches */
-  .our-churches {
-    padding: 0 18px;
-  }
-
-  .church-card img {
-    height: 240px;
-  }
-
-  .church-overlay h5 {
-    font-size: 1rem;
-  }
-
   section {
     padding: 40px 0;
   }
 }
 
-/* ==============================
-   Small Phones (576px - 767px)
-============================== */
 @media (max-width: 576px) {
-  /* All Pastors Grid — 1 per row */
   .all-pastors-grid {
     grid-template-columns: repeat(2, 1fr);
     padding: 0 18px;
   }
-
-  .all-pastors h2 {
-    font-size: 1.5rem;
-  }
-
   .all-pastors-grid .pastor-card img {
-    width: 100%;
     height: auto;
-    object-fit: cover;
   }
 
   .pastor-overlay {
     padding: 1px;
     font-size: 0.8rem;
   }
-
   .pastor-overlay h6 {
-    margin: 0;
     font-size: 0.8rem;
+    margin: 0;
   }
-
   .social-icons a {
     margin: 0 4px;
     font-size: 0.8rem;
-  }
-
-  /* Bootstrap column adjustments for pastors */
-  .col-md-3 {
-    width: 25%;
-    flex: 0 0 25%;
+    width: 28px;
+    height: 28px;
   }
 }
 
-/* ==============================
-   Extra Small Phones (<480px)
-============================== */
 @media (max-width: 480px) {
   .navbar-brand img {
     width: 120px;
+  }
+  .all-pastors-grid .pastor-card img {
+    height: 250px;
+  }
+  .pastor-overlay h6 {
+    font-size: 0.75rem;
+  }
+  .social-icons a {
+    width: 24px;
+    height: 24px;
+    font-size: 0.7rem;
   }
 }

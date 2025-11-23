@@ -1,32 +1,67 @@
 [
   {
     "id": 1,
-    "title": "Worship Service",
-    "speaker": "Pastor John",
-    "date": "Nov 15, 2025",
+    "title": "Responding to God Appropriately",
+    "speaker": "Pastor Precious Ogie",
+    "date": "Nov 10, 2025",
     "image": "assets/images/gallery/service-img1.jpg",
-    "video": "videos/worship-service.mp4",
-    "audio": "audios/worship-service.mp3",
-    "series": "General"
+    "video": "",
+    "audio": "assets/media/audios/RESPONDING TO GOD APPROPRIATELY.mp3",
+    "series": "General",
+    "subtitle": "Aligning Your Heart With God's Promptings",
+    "fullDate": "Monday, 10th November 2025",
+    "description": "A powerful teaching on responding correctly to the movements, promptings, and invitations of God."
   },
   {
     "id": 2,
-    "title": "Marriage & Relationship Masterclass",
-    "speaker": "Pastor Jane",
+    "title": "Hunger Beyond Satisfaction",
+    "speaker": "Pastor Precious Ogie",
     "date": "Nov 12, 2025",
-    "image": "assets/images/gallery/service-img8.jpg",
-    "video": "videos/marriage-masterclass.mp4",
-    "audio": "audios/marriage-masterclass.mp3",
-    "series": "Marriage Series"
+    "image": "assets/images/gallery/service-img2.jpg",
+    "video": "",
+    "audio": "assets/media/audios/HUNGER BEYOND SATISFACTION.mp3",
+    "series": "Revival",
+    "subtitle": "A Call to Deeper Pursuit of God",
+    "fullDate": "Wednesday, 12th November 2025",
+    "description": "A stirring message calling believers to cultivate a spiritual hunger that goes beyond natural satisfaction."
   },
   {
     "id": 3,
-    "title": "Spirit & Word Encounter",
-    "speaker": "Pastor John",
-    "date": "Nov 10, 2025",
+    "title": "Growth Conclave Review",
+    "speaker": "Pastor Precious Ogie",
+    "date": "Nov 14, 2025",
     "image": "assets/images/gallery/service-img3.jpg",
-    "video": "videos/spirit-word-encounter.mp4",
-    "audio": "audios/spirit-word-encounter.mp3",
-    "series": "Bible Study"
+    "video": "",
+    "audio": "assets/media/audios/Growth Conclave Review.mp3",
+    "series": "Leadership",
+    "subtitle": "Reviewing Patterns of Spiritual Growth",
+    "fullDate": "Friday, 14th November 2025",
+    "description": "A reflective session reviewing the Growth Conclave teachings and highlighting spiritual maturity frameworks."
+  },
+  {
+    "id": 4,
+    "title": "Faith In The Power Of God",
+    "speaker": "Pastor Precious Ogie",
+    "date": "Nov 16, 2025",
+    "image": "assets/images/gallery/service-img4.jpg",
+    "video": "",
+    "audio": "assets/media/audios/Faith In The Power Of God.mp3",
+    "series": "Faith Series",
+    "subtitle": "Understanding Demonstrative Faith",
+    "fullDate": "Sunday, 16th November 2025",
+    "description": "A faith-building teaching on accessing, expressing, and walking in the supernatural power of God."
+  },
+  {
+    "id": 5,
+    "title": "Encountering God – The Divine Collision",
+    "speaker": "Pastor Precious Ogie",
+    "date": "Nov 18, 2025",
+    "image": "assets/images/gallery/service-img5.jpg",
+    "video": "",
+    "audio": "assets/media/audios/ENCOUNTERING GOD.mp3",
+    "series": "Encounter Series",
+    "subtitle": "The Divine Collision",
+    "fullDate": "Tuesday, 18th November 2025",
+    "description": "A message centered on profound encounters with God that transform the believer and initiate divine alignment."
   }
 ]

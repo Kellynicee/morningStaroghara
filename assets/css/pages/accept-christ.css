@@ -3,6 +3,10 @@ body {
   background: #fdfdfd;
   color: #333;
 }
+.container {
+  width: 95%;
+  margin: auto;
+}
 
 .journey-section {
   background: linear-gradient(135deg, #f8f9fa, #fff);
@@ -63,13 +67,22 @@ body {
 }
 
 .accept-christ-form .btn-success {
-  background-color: #28a745;
-  border-color: #28a745;
+  background-color: rgb(169, 47, 41);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  padding: 10px 40px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease, transform 0.3s ease;
 }
 
 .accept-christ-form .btn-success:hover {
-  background-color: #218838;
-  border-color: #218838;
+  background-color: #fff;
+  color: rgb(169, 47, 41);
+  border: 2px solid rgb(169, 47, 41);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* Fade-in Animations */
@@ -92,4 +105,75 @@ body {
 .appear {
   opacity: 1;
   transform: translateX(0) translateY(0);
+}
+
+/* -------------------------------------------
+   MOBILE UI BEAUTIFICATION
+   ------------------------------------------- */
+@media (max-width: 768px) {
+  /* Section padding */
+  .journey-section,
+  .accept-christ-form {
+    padding: 50px 20px !important;
+    text-align: center;
+  }
+
+  /* Journey icons */
+  .journey-point {
+    margin-bottom: 35px;
+  }
+
+  .journey-point i {
+    font-size: 2.6rem;
+  }
+
+  .journey-point h5 {
+    font-size: 1.1rem;
+  }
+
+  .give-txt {
+    font-size: 1.5rem;
+  }
+
+  /* Form Card */
+  .accept-christ-form .card {
+    padding: 25px !important;
+    text-align: left; /* keep form text readable */
+    border-radius: 12px;
+    margin-top: 30px;
+  }
+
+  /* Image section (right side) */
+  .accept-christ-form img.animated-img {
+    width: 100%;
+    max-width: 420px;
+    display: block;
+    margin: 0 auto 20px auto; /* CENTER IT */
+    border-radius: 15px;
+  }
+
+  /* Quote text under image */
+  .accept-christ-form h5,
+  .accept-christ-form p {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .accept-christ-form h5 {
+    font-weight: 700;
+    color: #a92f29;
+    margin-bottom: 10px;
+  }
+
+  /* Give button alignment */
+  .accept-christ-form .btn-success {
+    display: block;
+    width: 80%;
+    margin: 20px auto 0 auto;
+  }
+
+  /* Spacing between form + image */
+  .accept-christ-form .row {
+    flex-direction: column-reverse; /* Image on top for smooth mobile layout */
+  }
 }

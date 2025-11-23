@@ -5,27 +5,22 @@ body {
   padding: 0;
 }
 
-/* ----------------------------
-   NAVBAR
------------------------------*/
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+/* Navbar */
 .navbar-brand img {
   max-width: 200px;
   height: auto;
-}
-
-@media (max-width: 991px) {
-  .navbar-brand img {
-    max-width: 150px;
-  }
 }
 
 .navbar-nav .nav-link.active {
   color: rgb(169, 47, 41) !important;
 }
 
-/* ----------------------------
-   HERO SECTION
------------------------------*/
+/* Hero Section */
 .give-hero {
   background-color: #f7f7f7;
   padding: 3rem 1rem;
@@ -37,60 +32,27 @@ body {
   font-size: 2.5rem;
   color: rgb(169, 47, 41);
   margin-bottom: 1rem;
-  animation: fadeInDown 1s ease forwards;
 }
 
 .give-hero p {
   font-size: 1.1rem;
   color: #555;
-  animation: fadeInUp 1s ease forwards;
 }
 
-@media (max-width: 768px) {
-  .give-hero h1 {
-    font-size: 2rem;
-  }
-  .give-hero p {
-    font-size: 1rem;
-  }
+.give-accounts h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(51, 42, 85);
 }
 
-/* ----------------------------
-   ACCORDION (Church Accounts)
------------------------------*/
+/* Accordion */
 .accordion-button {
   font-weight: 600;
   color: rgb(169, 47, 41);
   transition: all 0.3s ease;
 }
 
-.accordion-button::after {
-  transition: transform 0.3s ease;
-}
-
-.accordion-button.collapsed::after {
-  transform: rotate(0deg);
-}
-
-.accordion-button:not(.collapsed)::after {
-  transform: rotate(180deg);
-}
-
-.accordion-item {
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeUp 0.8s forwards;
-}
-
-.accordion-body p {
-  margin-bottom: 0.5rem;
-  word-break: break-word;
-}
-
+/* Copy Buttons */
 .copy-btn {
   background: none;
   border: none;
@@ -99,18 +61,17 @@ body {
   margin-left: 5px;
   transition: color 0.3s ease, transform 0.2s ease;
 }
-
 .copy-btn:hover {
   color: #000;
   transform: scale(1.2);
 }
 
-/* ----------------------------
-   DONATE BUTTON
------------------------------*/
+/* Donate & CTA Buttons (Consistent) */
 .donate-btn {
   background-color: rgb(169, 47, 41);
   color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
   border-radius: 50px;
   padding: 10px 40px;
   font-size: 1.1rem;
@@ -125,9 +86,7 @@ body {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* ----------------------------
-   FAITH & GIVING SECTION
------------------------------*/
+/* Faith & Giving */
 .faith-giving {
   background-color: #f8f9fa;
   padding: 4rem 1rem;
@@ -136,30 +95,13 @@ body {
 .faith-giving h3 {
   color: rgb(169, 47, 41);
   margin-bottom: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s forwards;
 }
 
 .faith-giving p {
   color: #555;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1.2s forwards;
+  text-align: justify;
 }
 
-.faith-giving .btn {
-  border-radius: 50px;
-  padding: 10px 30px;
-  transition: all 0.3s ease, transform 0.3s ease;
-}
-
-.faith-giving .btn:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Giving Image */
 .giving-image img {
   max-width: 100%;
   height: auto;
@@ -172,9 +114,7 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* ----------------------------
-   FOOTER
------------------------------*/
+/* Footer */
 .footer {
   background-color: #111;
   color: #fff;
@@ -196,7 +136,6 @@ body {
 
 .footer-left img.footer-logo {
   max-width: 150px;
-  height: auto;
   margin-bottom: 1rem;
 }
 
@@ -218,104 +157,16 @@ body {
   font-size: 0.9rem;
 }
 
-/* ----------------------------
-   ANIMATIONS
------------------------------*/
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ----------------------------
-   RESPONSIVE MEDIA QUERIES
------------------------------*/
-
-/* Medium Devices */
-@media (max-width: 991px) {
+/* Responsive */
+@media (max-width: 768px) {
   .faith-giving .row {
     flex-direction: column;
   }
-
   .faith-giving .col-lg-6 {
     text-align: center;
   }
 
-  .faith-giving .giving-image img {
-    margin-bottom: 1rem;
-  }
-
-  .give-hero h1 {
+  .give-accounts h2 {
     font-size: 2rem;
-  }
-}
-
-/* Small Devices */
-@media (max-width: 768px) {
-  .give-hero h1 {
-    font-size: 1.8rem;
-  }
-  .give-hero p {
-    font-size: 1rem;
-  }
-
-  .donate-btn {
-    padding: 10px 30px;
-    font-size: 1rem;
-  }
-
-  .accordion-button {
-    font-size: 0.9rem;
-  }
-}
-
-/* Extra Small Devices */
-@media (max-width: 576px) {
-  .faith-giving h3,
-  .faith-giving p {
-    text-align: center;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-left,
-  .footer-contact,
-  .footer-social {
-    margin-bottom: 1.5rem;
-  }
-
-  .giving-image img {
-    width: 100%;
-    height: auto;
   }
 }

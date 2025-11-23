@@ -16,15 +16,15 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/shared.css" />
-    <link rel="stylesheet" href="assets/css/pages/give.css" />
-
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/shared.css" />
+    <link rel="stylesheet" href="assets/css/pages/give.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -79,7 +79,6 @@
     <!-- Accounts FAQ-Style -->
     <section class="give-accounts container my-5">
       <h2 class="text-center mb-4">Church Accounts</h2>
-
       <div class="accordion" id="accountsAccordion">
         <!-- GTBank Tithes -->
         <div class="accordion-item">
@@ -116,7 +115,6 @@
             </div>
           </div>
         </div>
-
         <!-- UBA Tithes -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingUBA">
@@ -152,7 +150,6 @@
             </div>
           </div>
         </div>
-
         <!-- Partnership Account -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingPartnership">
@@ -184,7 +181,6 @@
             </div>
           </div>
         </div>
-
         <!-- Project Account -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingProject">
@@ -216,7 +212,6 @@
             </div>
           </div>
         </div>
-
         <!-- Domiciliary Accounts -->
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingDomiciliary">
@@ -273,9 +268,7 @@
       </div>
 
       <div class="text-center my-4">
-        <a href="contact.html" class="btn btn-primary btn-lg donate-btn">
-          Donate Now
-        </a>
+        <a href="contact.html" class="btn donate-btn btn-lg">Donate Now</a>
       </div>
     </section>
 
@@ -290,7 +283,7 @@
               Are you ready to take the next step in your faith journey? We are
               here to guide you in giving your life to Christ.
             </p>
-            <a href="accept-christ.html" class="btn btn-success btn-lg mt-2">
+            <a href="accept-christ.html" class="btn donate-btn btn-lg mt-2">
               I Want to Accept Christ
             </a>
           </div>
@@ -298,19 +291,19 @@
           <div class="col-lg-6">
             <div class="giving-image text-center mb-3">
               <img
-                src="assets/images/about/church3.avif"
+                src="assets/images/about/church2.avif"
                 alt="Giving is an act of faith"
                 class="img-fluid rounded shadow"
               />
             </div>
-            <p>
+            <p class="giving-text">
               Giving is an act of faith and generosity that supports our
               church’s mission and expands God’s kingdom. Every contribution,
               whether a tithe, offering or partnership, makes a difference and
               furthers our collective impact. Join us in spreading God’s love
               through giving.
             </p>
-            <a href="contact.html" class="btn btn-primary btn-lg mt-2">
+            <a href="contact.html" class="btn donate-btn btn-lg mt-2">
               Give Now
             </a>
           </div>
@@ -371,25 +364,20 @@
       </div>
     </footer>
 
-    <!-- Your other scripts, e.g., Bootstrap -->
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script
-      src="https://kit.fontawesome.com/yourkit.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <!-- Copy-to-clipboard script -->
     <script>
       document.querySelectorAll('.copy-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
           const targetId = btn.getAttribute('data-target');
           const text = document.getElementById(targetId).textContent;
           navigator.clipboard.writeText(text).then(() => {
-            btn.innerHTML = '<i class="fas fa-check"></i>'; // Change icon to check
+            btn.innerHTML = '<i class="fas fa-check"></i>';
             setTimeout(
               () => (btn.innerHTML = '<i class="fas fa-copy"></i>'),
               1500
-            ); // Revert after 1.5s
+            );
           });
         });
       });

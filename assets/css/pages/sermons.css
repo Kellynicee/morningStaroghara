@@ -1,6 +1,18 @@
+/* ====== Fonts & Container ====== */
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 95%;
+  margin: auto;
+}
+
 /* ====== Hero Section ====== */
 .sermon-hero {
-  background-image: url('../assets/images/hero/sermon_files/m'); /* adjust relative path */
+  background-image: url('../../images/hero/sermon-hero.avif');
   background-size: cover;
   height: 50vh;
   display: flex;
@@ -9,6 +21,7 @@
   text-align: center;
   color: #fff;
   position: relative;
+  margin-bottom: 3rem; /* space below hero so cards aren't covered */
 }
 .sermon-hero::after {
   content: '';
@@ -30,31 +43,50 @@
   margin-top: 10px;
 }
 
-/* ====== Filters ====== */
-.sermon-filters {
+/* ====== Dropdown Filter ====== */
+.sermon-filters-dropdown {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin: 2rem 0;
+  margin: 2rem auto; /* center with space */
+  position: relative;
+  z-index: 2; /* ensures dropdown is above hero */
 }
-.sermon-filters button {
-  background-color: rgb(169, 47, 41);
-  color: #fff;
-  border: none;
-  padding: 10px 25px;
+.sermon-filters-dropdown select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 10px 40px 10px 15px;
+  font-size: 1rem;
   border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
-}
-.sermon-filters button:hover,
-.sermon-filters button.active {
+  border: 2px solid #a92f29;
   background-color: #fff;
-  color: rgb(169, 47, 41);
-  border: 1px solid rgb(169, 47, 41);
+  color: #a92f29;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+  min-width: 200px;
+  max-width: 300px;
 }
 
+.sermon-filters-dropdown select:hover,
+.sermon-filters-dropdown select:focus {
+  background-color: #a92f29;
+  color: #fff;
+  border-color: #a92f29;
+}
+
+.sermon-filters-dropdown::after {
+  content: '▼';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #a92f29;
+  font-size: 0.7rem;
+}
+
+/* ====== Sermon Grid ====== */
 /* ====== Sermon Grid ====== */
 .sermon-grid {
   display: grid;
@@ -62,100 +94,151 @@
   gap: 2rem;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 4rem;
+  justify-items: center; /* centers cards if fewer than full row */
 }
+
 .sermon-card {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  max-width: 320px; /* keeps card from stretching too wide */
+  width: 100%;
 }
+
 .sermon-card:hover {
   transform: translateY(-5px);
 }
+
 .sermon-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 200px; /* fixed height */
+  object-fit: cover; /* keeps image proportion */
+  display: block;
 }
+
 .sermon-content {
   padding: 15px;
 }
+
 .sermon-content h3 {
   font-size: 1.2rem;
   color: rgb(51, 42, 85);
   margin-bottom: 0.5rem;
   font-weight: 700;
 }
+
 .sermon-content p {
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 1rem;
 }
+
+.sermon-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap; /* ensures mobile wraps */
+  justify-content: center; /* center buttons */
+}
+
 .sermon-buttons a {
-  display: inline-block;
-  margin-right: 10px;
+  flex: 1 1 auto;
+  text-align: center;
+  min-width: 120px;
   background-color: rgb(169, 47, 41);
   color: #fff;
-  padding: 8px 20px;
+  padding: 8px 10px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   font-size: 0.9rem;
 }
+
 .sermon-buttons a:hover {
   background-color: #fff;
   color: rgb(169, 47, 41);
   border: 1px solid rgb(169, 47, 41);
 }
 
-/* ====== Featured Sermon ====== */
-.featured-sermon {
-  background: #f8f9fa;
-  padding: 3rem 1rem;
-  margin-bottom: 3rem;
-  text-align: center;
-  border-radius: 12px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .sermon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: center;
+  }
+  .sermon-card img {
+    height: 180px;
+  }
 }
-.featured-sermon h2 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: rgb(169, 47, 41);
+
+@media (max-width: 576px) {
+  .sermon-filters-dropdown select {
+    width: 90%;
+  }
+  .sermon-card img {
+    height: 160px;
+  }
 }
-.featured-sermon p {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 1.5rem;
+
+/* ====== Pagination ====== */
+.sermon-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 2rem auto 6rem;
 }
-.featured-sermon a {
-  display: inline-block;
-  background-color: rgb(169, 47, 41);
+
+/* ====== Footer ====== */
+.footer {
+  background-color: #333;
   color: #fff;
-  padding: 10px 25px;
-  border-radius: 50px;
+  padding: 3rem 0 2rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footer h4 {
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: inherit;
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-.featured-sermon a:hover {
-  background-color: #fff;
-  color: rgb(169, 47, 41);
-  border: 1px solid rgb(169, 47, 41);
 }
 
-/* ====== Modals ====== */
-.modal audio,
-.modal video {
-  width: 100%;
-  outline: none;
+.footer .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
 }
 
+.footer .social-link i {
+  color: #fff;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.footer .social-link i:hover {
+  color: #a92f29;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* ====== Responsive ====== */
 @media (max-width: 768px) {
   .sermon-hero h1 {
     font-size: 2rem;
@@ -166,8 +249,10 @@
   .sermon-grid {
     grid-template-columns: 1fr;
   }
-  .featured-sermon {
-    width: 100%;
-    padding: 2rem 1rem;
+}
+
+@media (max-width: 576px) {
+  .sermon-filters-dropdown select {
+    width: 90%;
   }
 }

@@ -23,6 +23,10 @@ a {
   color: inherit;
 }
 
+.container {
+  width: 95%;
+  margin: auto;
+}
 /* ===============================
    HERO SECTION
 ================================= */
@@ -352,9 +356,9 @@ a {
 
 .service-container {
   display: flex;
-  width: 80%;
-  margin: auto;
-  gap: 2rem;
+  width: 100% !important;
+  padding: 0 1rem; /* small padding for sides */
+  gap: 1rem;
   justify-content: center;
 }
 
@@ -544,7 +548,7 @@ a {
 .gallery-section {
   background-color: #f8f9fa;
   padding: 10px 0px;
-  padding: 60px 0;
+  padding: 30px 0;
 }
 
 .gallery-section h3 {
@@ -564,7 +568,8 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  width: 90%;
+  width: 100% !important;
+  padding: 0 7rem;
   margin: 0 auto;
 }
 
@@ -636,17 +641,17 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* vertical centering */
+  min-height: 600px; /* adjust as needed */
   gap: 2rem;
   padding: 100px 20px;
-  z-index: 2;
-  color: white;
+  color: #fff;
 
   /* background image */
   background-image: url('../../images/gallery/service-img16.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center; /* change to top/center if you want top focus */
-  /* DO NOT use fixed on mobile/ios */
+  background-position: center center;
   background-attachment: scroll;
   -webkit-background-clip: border-box;
   background-clip: border-box;
@@ -657,7 +662,8 @@ a {
   background: rgba(0, 0, 0, 0.55); /* transparent black overlay */
   padding: 40px 60px;
   border-radius: 16px;
-  width: 90%;
+  width: 100%;
+  margin: 0 auto 30px auto;
   max-width: 800px;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -821,6 +827,11 @@ a {
     background-position: center top !important;
     background-size: cover !important;
   }
+
+  .container {
+    width: 95%;
+    margin: auto;
+  }
   /* ------------------------------
      HERO SECTION
   ------------------------------ */
@@ -879,11 +890,20 @@ a {
   }
 
   .our-service .our-service-join {
-    padding: 10px 30px;
+    padding: 5px 5px;
+    font-size: 0.9rem;
+    text-align: center;
   }
   .our-service h2 {
     font-size: 2rem;
     font-weight: 800;
+  }
+  .service-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-content p {
+    font-size: 1rem;
   }
   .service-container {
     display: flex;
@@ -911,7 +931,7 @@ a {
     padding: 0 1rem;
     max-width: 100%;
     margin: 0 auto;
-    padding: 80px 0;
+    padding: 10px 0;
   }
 
   .upcoming-events h3 {

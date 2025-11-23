@@ -19,8 +19,8 @@ nav.navbar.scrolled {
    FOOTER SECTION
 ================================= */
 .footer {
-  background-color: #0d0d0d; /* deeper tone */
-
+  /* background-color: #0d0d0d;  */
+  background-color: #333;
   color: #fff;
   padding: 60px 0 20px;
   font-family: 'Montserrat', sans-serif;
@@ -104,6 +104,9 @@ nav.navbar.scrolled {
      FOOTER SECTION
   ------------------------------ */
 @media (max-width: 768px) {
+  .footer-contact h4 {
+    font-size: 1.2rem;
+  }
   .logo {
     width: 120px;
   }

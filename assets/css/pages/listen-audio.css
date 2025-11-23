@@ -1,5 +1,6 @@
 .sermon-hero {
-  background: url('assets/images/hero/sermon-hero.jpg') center/cover no-repeat;
+  background-image: url('../../images/hero/sermon-hero.avif') center/cover
+    no-repeat;
   height: 40vh;
   display: flex;
   align-items: center;
